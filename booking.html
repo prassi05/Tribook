@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - TriBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking-symbols.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-ticket-alt"></i>
+                <span>TriBook</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link active">Booking</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" onclick="logout()" class="nav-link logout-btn">Logout</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+        <div class="container">
+            <h1 class="page-title">Book Your Experience</h1>
+            <p class="page-subtitle">Choose from movies, transport, or events</p>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="movies">
+                    <i class="fas fa-film"></i>
+                    <span>Movies</span>
+                </button>
+                <button class="tab-btn" data-category="transport">
+                    <i class="fas fa-bus"></i>
+                    <span>Transport</span>
+                </button>
+                <button class="tab-btn" data-category="events">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Events</span>
+                </button>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="booking-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for movies, destinations, or events...">
+                </div>
+                <div class="filter-box">
+                    <i class="fas fa-filter"></i>
+                    <select id="filterSelect">
+                        <option value="all">All Items</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Movies Tab Content -->
+            <div class="tab-content active" id="moviesContent">
+                <div class="booking-grid">
+                    <div class="booking-card" data-item="Inception">
+                        <div class="card-image">
+                            <div class="card-icon"><i class="fas fa-film"></i></div>
+                            <img src="https://via.placeholder.com/300x400/2563EB/ffffff?text=Inception" alt="Inception">
+                            <div class="card-badge">Action</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-video"></i> Inception</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-clock"></i> 2h 28m</span>
+                                <span><i class="fas fa-star"></i> 8.8/10</span>
+                            </div>
+                            <p class="card-description">A thief who enters the dreams of others to steal secrets.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹250</span>
+                                <button class="btn-book" onclick="openBookingModal('movie', 'Inception', '250')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card" data-item="The Dark Knight">
+                        <div class="card-image">
+                            <div class="card-icon"><i class="fas fa-film"></i></div>
+                            <img src="https://via.placeholder.com/300x400/10B981/ffffff?text=Dark+Knight" alt="The Dark Knight">
+                            <div class="card-badge">Action</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-video"></i> The Dark Knight</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-clock"></i> 2h 32m</span>
+                                <span><i class="fas fa-star"></i> 9.0/10</span>
+                            </div>
+                            <p class="card-description">Batman faces the Joker, a criminal mastermind of Gotham.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹300</span>
+                                <button class="btn-book" onclick="openBookingModal('movie', 'The Dark Knight', '300')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card" data-item="Interstellar">
+                        <div class="card-image">
+                            <div class="card-icon"><i class="fas fa-film"></i></div>
+                            <img src="https://via.placeholder.com/300x400/F59E0B/ffffff?text=Interstellar" alt="Interstellar">
+                            <div class="card-badge">Sci-Fi</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-video"></i> Interstellar</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-clock"></i> 2h 49m</span>
+                                <span><i class="fas fa-star"></i> 8.6/10</span>
+                            </div>
+                            <p class="card-description">A journey through space to save humanity's future.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹280</span>
+                                <button class="btn-book" onclick="openBookingModal('movie', 'Interstellar', '280')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transport Tab Content -->
+            <div class="tab-content" id="transportContent">
+                <div class="booking-grid">
+                    <div class="booking-card" data-item="Chennai to Bangalore">
+                        <div class="card-image transport-card">
+                            <div class="card-icon"><i class="fas fa-bus"></i></div>
+                            <img src="https://via.placeholder.com/300x400/2563EB/ffffff?text=Bus+Travel" alt="Transport">
+                            <div class="card-badge">Bus</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-route"></i> Chennai → Bangalore</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-clock"></i> 6h 30m</span>
+                                <span><i class="fas fa-users"></i> 40 Seats</span>
+                            </div>
+                            <p class="card-description">Comfortable AC bus service with recliner seats.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹800</span>
+                                <button class="btn-book" onclick="openBookingModal('transport', 'Chennai to Bangalore', '800')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card" data-item="Delhi to Mumbai">
+                        <div class="card-image transport-card">
+                            <div class="card-icon"><i class="fas fa-train"></i></div>
+                            <img src="https://via.placeholder.com/300x400/10B981/ffffff?text=Train+Travel" alt="Transport">
+                            <div class="card-badge">Train</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-route"></i> Delhi → Mumbai</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-clock"></i> 16h 25m</span>
+                                <span><i class="fas fa-users"></i> Available</span>
+                            </div>
+                            <p class="card-description">Rajdhani Express - Premium train service.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹1,500</span>
+                                <button class="btn-book" onclick="openBookingModal('transport', 'Delhi to Mumbai', '1500')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card" data-item="Kolkata to Goa">
+                        <div class="card-image transport-card">
+                            <div class="card-icon"><i class="fas fa-plane"></i></div>
+                            <img src="https://via.placeholder.com/300x400/F59E0B/ffffff?text=Flight+Travel" alt="Transport">
+                            <div class="card-badge">Flight</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-route"></i> Kolkata → Goa</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-clock"></i> 2h 45m</span>
+                                <span><i class="fas fa-users"></i> Limited</span>
+                            </div>
+                            <p class="card-description">Direct flight with in-flight meals included.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹4,200</span>
+                                <button class="btn-book" onclick="openBookingModal('transport', 'Kolkata to Goa', '4200')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Tab Content -->
+            <div class="tab-content" id="eventsContent">
+                <div class="booking-grid">
+                    <div class="booking-card" data-item="Summer Music Festival">
+                        <div class="card-image">
+                            <div class="card-icon"><i class="fas fa-music"></i></div>
+                            <img src="https://via.placeholder.com/300x400/2563EB/ffffff?text=Music+Festival" alt="Event">
+                            <div class="card-badge">Concert</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-calendar-star"></i> Summer Music Festival</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-calendar"></i> Dec 15, 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+                            </div>
+                            <p class="card-description">Live performances by top artists from around the world.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹1,500</span>
+                                <button class="btn-book" onclick="openBookingModal('event', 'Summer Music Festival', '1500')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card" data-item="Tech Conference 2024">
+                        <div class="card-image">
+                            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                            <img src="https://via.placeholder.com/300x400/10B981/ffffff?text=Tech+Conference" alt="Event">
+                            <div class="card-badge">Conference</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-calendar-star"></i> Tech Conference 2024</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-calendar"></i> Jan 20, 2025</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bangalore</span>
+                            </div>
+                            <p class="card-description">Latest innovations in technology and networking.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹2,500</span>
+                                <button class="btn-book" onclick="openBookingModal('event', 'Tech Conference 2024', '2500')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-card" data-item="Art Exhibition">
+                        <div class="card-image">
+                            <div class="card-icon"><i class="fas fa-palette"></i></div>
+                            <img src="https://via.placeholder.com/300x400/F59E0B/ffffff?text=Art+Exhibition" alt="Event">
+                            <div class="card-badge">Exhibition</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><i class="fas fa-calendar-star"></i> Contemporary Art Exhibition</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-calendar"></i> Dec 10, 2024</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Delhi</span>
+                            </div>
+                            <p class="card-description">Explore stunning modern and contemporary artworks.</p>
+                            <div class="card-footer">
+                                <span class="card-price">₹500</span>
+                                <button class="btn-book" onclick="openBookingModal('event', 'Art Exhibition', '500')">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <div class="back-home-container">
+        <a href="index.html" class="btn-back-home">
+            <i class="fas fa-home"></i>
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeBookingModal()">&times;</span>
+            <h2 class="modal-title">Complete Your Booking</h2>
+            
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">
+                            <i class="fas fa-user"></i> Full Name
+                        </label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddress">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input type="email" id="emailAddress" name="emailAddress" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phoneNumber">
+                            <i class="fas fa-phone"></i> Phone Number
+                        </label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingCategory">
+                            <i class="fas fa-tag"></i> Category
+                        </label>
+                        <input type="text" id="bookingCategory" name="bookingCategory" readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingItem">
+                            <i class="fas fa-ticket-alt"></i> Item/Service
+                        </label>
+                        <input type="text" id="bookingItem" name="bookingItem" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingDate">
+                            <i class="fas fa-calendar"></i> Date
+                        </label>
+                        <input type="date" id="bookingDate" name="bookingDate" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingTime">
+                            <i class="fas fa-clock"></i> Time
+                        </label>
+                        <input type="time" id="bookingTime" name="bookingTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketQuantity">
+                            <i class="fas fa-users"></i> Number of Tickets
+                        </label>
+                        <input type="number" id="ticketQuantity" name="ticketQuantity" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMethod">
+                        <i class="fas fa-credit-card"></i> Payment Method
+                    </label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="Net Banking">Net Banking</option>
+                        <option value="Cash">Cash on Delivery</option>
+                    </select>
+                </div>
+
+                <div class="form-summary">
+                    <div class="summary-row">
+                        <span>Price per Ticket:</span>
+                        <span id="pricePerTicket">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Quantity:</span>
+                        <span id="totalQuantity">1</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Amount:</span>
+                        <span id="totalPrice">₹0</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit-booking">
+                    <span>Confirm Booking</span>
+                    <i class="fas fa-check"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 TriBook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

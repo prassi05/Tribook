@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TriBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-ticket-alt"></i>
+                <span>TriBook</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Booking</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="#" onclick="logout()" class="nav-link logout-btn">Logout</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">We're here to help and answer any question you might have</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="form-title">Send Us a Message</h2>
+                    <p class="form-description">Fill out the form below and we'll get back to you as soon as possible</p>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">
+                                <i class="fas fa-user"></i> Full Name
+                            </label>
+                            <input type="text" id="contactName" name="contactName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">
+                                <i class="fas fa-phone"></i> Phone Number
+                            </label>
+                            <input type="tel" id="contactPhone" name="contactPhone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">
+                                <i class="fas fa-tag"></i> Subject
+                            </label>
+                            <input type="text" id="contactSubject" name="contactSubject" placeholder="What is this regarding?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">
+                                <i class="fas fa-comment"></i> Message
+                            </label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" placeholder="Write your message here..." required></textarea>
+                            <div class="character-count">
+                                <span id="charCount">0</span> / 500 characters
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h2 class="info-title">Contact Information</h2>
+                    <p class="info-description">Reach out to us through any of these channels</p>
+
+                    <div class="contact-info-boxes">
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Address</h3>
+                            <p>123 TriBook Street<br>Chennai, Tamil Nadu<br>India - 600001</p>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210<br>+91 87654 32109<br>Mon-Sat: 9AM - 8PM</p>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>info@tribook.com<br>support@tribook.com<br>24/7 Support</p>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9AM - 8PM<br>Saturday: 10AM - 6PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find quick answers to common questions</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How do I book tickets on TriBook?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply select your preferred category (Movies, Transport, or Events), browse available options, fill in your details, and complete the payment. You'll receive instant confirmation via email and SMS.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What payment methods do you accept?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept UPI, Credit Cards, Debit Cards, Net Banking, and Cash on Delivery for select services. All transactions are 100% secure.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I cancel or modify my booking?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel or modify your booking up to 24 hours before the scheduled date. Cancellation charges may apply depending on the service provider's policy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How will I receive my tickets?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After successful booking, you'll receive an email and SMS with your e-ticket. You can also download the ticket from your booking confirmation page.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Is my personal information secure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We use industry-standard encryption and security measures to protect your personal and payment information. Your data is never shared with third parties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do you offer refunds?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Refund policies vary by service provider. Generally, cancellations made 24+ hours in advance are eligible for full or partial refunds. Please check specific terms during booking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <div class="back-home-container">
+        <a href="index.html" class="btn-back-home">
+            <i class="fas fa-home"></i>
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 TriBook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TriBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-ticket-alt"></i>
+                <span>TriBook</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Booking</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" onclick="logout()" class="nav-link logout-btn">Logout</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="page-title">About TriBook</h1>
+            <p class="page-subtitle">Your trusted partner for all booking needs</p>
+        </div>
+    </section>
+
+    <!-- About Story -->
+    <section class="about-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p>
+                        TriBook was founded with a simple vision: to create a unified platform where users can seamlessly book movies, transport, and events all in one place. We understand the hassle of juggling multiple apps and websites for different bookings.
+                    </p>
+                    <p>
+                        Since our launch, we've helped thousands of customers save time and enjoy hassle-free booking experiences. Our commitment to innovation, security, and customer satisfaction drives everything we do.
+                    </p>
+                    <p>
+                        Today, TriBook stands as India's premier multi-service booking platform, trusted by users across the country for its reliability, convenience, and exceptional service.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <div class="image-wrapper">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How TriBook Works</h2>
+                <p class="section-subtitle">Simple, fast, and secure booking in 3 easy steps</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Select Category</h3>
+                    <p>Choose from Movies, Transport, or Events based on your needs</p>
+                </div>
+
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Fill Details</h3>
+                    <p>Enter your information and select your preferred date and time</p>
+                </div>
+
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Confirm Booking</h3>
+                    <p>Complete payment and receive instant confirmation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To revolutionize the booking experience by providing a single, unified platform that simplifies how people book entertainment, travel, and events, making it accessible to everyone.
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become the world's most trusted and innovative multi-service booking platform, setting new standards for convenience, reliability, and customer satisfaction.
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>
+                        Customer-first approach, innovation, transparency, security, and continuous improvement are the core values that guide our operations and decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="stat-number">50,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3 class="stat-number">1,00,000+</h3>
+                    <p>Bookings Completed</p>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 class="stat-number">25+</h3>
+                    <p>Cities Covered</p>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="stat-number">4.8/5</h3>
+                    <p>Average Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">The passionate people behind TriBook</p>
+            </div>
+
+            <div class="team-grid-simple">
+                <div class="team-card-simple">
+                    <div class="team-icon-wrapper">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Prassitha</h3>
+                        <p>Co-Founder & Developer</p>
+                        <div class="team-social-simple">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card-simple">
+                    <div class="team-icon-wrapper">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Nishita</h3>
+                        <p>Co-Founder & Developer</p>
+                        <div class="team-social-simple">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <div class="back-home-container">
+        <a href="index.html" class="btn-back-home">
+            <i class="fas fa-home"></i>
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 TriBook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

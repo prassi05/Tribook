@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - TriBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Force scrolling fix */
+        body.confirm-body {
+            overflow-y: auto !important;
+            height: auto !important;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        .confirm-container {
+            min-height: auto;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body class="confirm-body">
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <div class="confirm-container">
+        <div class="confirm-card">
+            <!-- Success Icon -->
+            <div class="success-icon">
+                <div class="success-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <h1 class="confirm-title">Booking Confirmed!</h1>
+            <p class="confirm-subtitle">Your booking has been successfully processed</p>
+
+            <!-- Booking Details -->
+            <div class="booking-details">
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-ticket-alt"></i> Booking ID:
+                    </span>
+                    <span class="detail-value" id="bookingId">TB-2024-001</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-user"></i> Name:
+                    </span>
+                    <span class="detail-value" id="customerName">-</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-tag"></i> Category:
+                    </span>
+                    <span class="detail-value" id="bookingCategory">-</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-film"></i> Item:
+                    </span>
+                    <span class="detail-value" id="bookingItem">-</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-calendar"></i> Date:
+                    </span>
+                    <span class="detail-value" id="bookingDate">-</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-clock"></i> Time:
+                    </span>
+                    <span class="detail-value" id="bookingTime">-</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-users"></i> Tickets:
+                    </span>
+                    <span class="detail-value" id="ticketCount">-</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">
+                        <i class="fas fa-credit-card"></i> Payment:
+                    </span>
+                    <span class="detail-value" id="paymentMethod">-</span>
+                </div>
+
+                <div class="detail-row total-row">
+                    <span class="detail-label">
+                        <i class="fas fa-rupee-sign"></i> Total Amount:
+                    </span>
+                    <span class="detail-value total-amount" id="totalAmount">₹0</span>
+                </div>
+            </div>
+
+            <!-- Confirmation Message -->
+            <div class="confirm-message">
+                <i class="fas fa-envelope-open-text"></i>
+                <p>A confirmation email has been sent to your registered email address with your booking details.</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="confirm-buttons">
+                <button class="btn btn-download" onclick="downloadTicket()">
+                    <i class="fas fa-download"></i>
+                    <span>Download Ticket</span>
+                </button>
+                <a href="booking.html" class="btn btn-secondary">
+                    <i class="fas fa-plus"></i>
+                    <span>Book Another</span>
+                </a>
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+
+            <!-- Social Share -->
+            <div class="social-share">
+                <p>Share your booking:</p>
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <button class="share-btn facebook" onclick="shareOnFacebook()">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="share-btn twitter" onclick="shareOnTwitter()">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

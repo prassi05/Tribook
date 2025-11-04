@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TriBook Booking System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-ticket-alt"></i>
+                <span>TriBook</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="booking.html" class="nav-link">Booking</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" onclick="logout()" class="nav-link logout-btn">Logout</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">Welcome to TriBook</h1>
+            <p class="hero-subtitle animate-fade-in-delay">Your All-in-One Booking Solution</p>
+            <p class="hero-description animate-fade-in-delay-2">
+                Book movie tickets, transport, and event passes all in one place
+            </p>
+            <div class="hero-buttons animate-fade-in-delay-3">
+                <a href="booking.html" class="btn btn-primary">
+                    <span>Start Booking</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="about.html" class="btn btn-secondary">
+                    <span>Learn More</span>
+                    <i class="fas fa-info-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Booking Services</h2>
+                <p class="section-subtitle">Choose from our three amazing booking categories</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Movie Booking Card -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-image-gradient movie-gradient">
+                        <div class="service-overlay">
+                            <i class="fas fa-film service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Movie Tickets</h3>
+                        <p class="service-description">
+                            Book tickets for the latest blockbusters and enjoy seamless movie experiences. Choose your favorite seats, showtimes, and theaters.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Multiple Theaters
+                            </div>
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Instant Booking
+                            </div>
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Best Prices
+                            </div>
+                        </div>
+                        <a href="booking.html?category=movies" class="btn-service">
+                            <span>Book Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Transport Booking Card -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image-gradient transport-gradient">
+                        <div class="service-overlay">
+                            <i class="fas fa-bus service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Transport Booking</h3>
+                        <p class="service-description">
+                            Reserve bus and train tickets for comfortable journeys. Multiple routes, flexible timings, and secure payment options available.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Safe Travel
+                            </div>
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> All Routes
+                            </div>
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Easy Cancellation
+                            </div>
+                        </div>
+                        <a href="booking.html?category=transport" class="btn-service">
+                            <span>Book Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event Booking Card -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image-gradient event-gradient">
+                        <div class="service-overlay">
+                            <i class="fas fa-calendar-check service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Event Passes</h3>
+                        <p class="service-description">
+                            Get exclusive access to concerts, college fests, exhibitions, and special events. Book your passes and never miss out on amazing experiences.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Live Events
+                            </div>
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> VIP Access
+                            </div>
+                            <div class="feature-badge">
+                                <i class="fas fa-check"></i> Early Bird Offers
+                            </div>
+                        </div>
+                        <a href="booking.html?category=events" class="btn-service">
+                            <span>Book Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose TriBook?</h2>
+                <p class="section-subtitle">Experience the best booking platform with amazing features</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box" data-aos="zoom-in">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Booking</h3>
+                    <p>Book your tickets in seconds with our fast and efficient system</p>
+                </div>
+
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>100% secure payment gateway with multiple payment options</p>
+                </div>
+
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Instant Confirmation</h3>
+                    <p>Get immediate booking confirmation via email and SMS</p>
+                </div>
+
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access TriBook from any device, anywhere, anytime</p>
+                </div>
+
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is always ready to help you</p>
+                </div>
+
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Get the best deals and exclusive offers on all bookings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Booking?</h2>
+                <p class="cta-text">Join thousands of satisfied customers and experience hassle-free booking today!</p>
+                <a href="booking.html" class="btn btn-cta">
+                    <span>Explore All Services</span>
+                    <i class="fas fa-rocket"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-ticket-alt"></i>
+                        <span>TriBook</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted platform for booking movies, transport, and events all in one place.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="booking.html?category=movies">Movie Tickets</a></li>
+                        <li><a href="booking.html?category=transport">Transport Booking</a></li>
+                        <li><a href="booking.html?category=events">Event Passes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@tribook.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Chennai, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TriBook. All rights reserved. | Designed with <i class="fas fa-heart"></i> by Prassitha & Nishita</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

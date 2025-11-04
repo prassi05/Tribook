@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TriBook Booking System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <!-- Left Side - Image Section -->
+        <div class="login-image-section">
+            <!-- REPLACE IMAGE: Line 16 - Replace 'images/login-bg.jpg' with your login background image -->
+            <img src="images/login-bg.jpg" alt="TriBook Login Background" class="login-bg-image">
+            <div class="login-overlay">
+                <div class="login-welcome-text">
+                    <h1 class="fade-in-text">Welcome to TriBook</h1>
+                    <p class="fade-in-text-delayed">Your One-Stop Booking Solution</p>
+                    <div class="login-features">
+                        <div class="feature-item">
+                            <i class="fas fa-film"></i>
+                            <span>Movie Tickets</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bus"></i>
+                            <span>Transport Booking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Event Passes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="login-form-section">
+            <div class="login-form-wrapper">
+                <div class="login-header">
+                    <div class="logo-container">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h2>TriBook</h2>
+                    </div>
+                    <p class="login-subtitle">Sign in to continue</p>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">
+                            <i class="fas fa-user"></i> Username
+                        </label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i> Password
+                        </label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <span class="toggle-password" onclick="togglePassword()">
+                            <i class="fas fa-eye" id="toggleIcon"></i>
+                        </span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <span>Login to TriBook</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="register-link">
+                        Don't have an account? <a href="#" onclick="showRegisterMessage()">Register Now</a>
+                    </div>
+                </form>
+
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+            <p>Signing you in...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
