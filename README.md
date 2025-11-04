@@ -64,7 +64,7 @@ TriBook provides a **single, unified platform** with:
 *Hero section with animated stats and category showcase*
 
 ### Booking Page
-![Booking Page](/.booking.png)
+![Booking Page](./booking.png)
 *Dynamic booking interface with category tabs and search*
 
 ### My Bookings Page
@@ -381,5 +381,6 @@ Give a ⭐ if this project helped you!
 **Made with ❤️ by Prassitha & Nishita**
 
 ---
+
 
 
